@@ -1,6 +1,7 @@
 buildscript {
 	ext {
 		kotlinVersion = '1.2.10'
+		joinfacesVersion = '2.4.1'
 		springBootVersion = '1.5.9.RELEASE'
 	}
 	repositories {
@@ -21,6 +22,7 @@ apply plugin: 'org.springframework.boot'
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+
 compileKotlin {
 	kotlinOptions.jvmTarget = "1.8"
 }
@@ -37,5 +39,6 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
 	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
+	compile("org.joinfaces:jsf-spring-boot-starter:${joinfacesVersion}")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
